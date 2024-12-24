@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Secret Santa Gift</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #ffebee;
+            color: #333;
+            text-align: center;
+            padding: 50px;
+        }
+
+        h1 {
+            color: #d32f2f;
+            font-size: 3em;
+        }
+
+        h2 {
+            color: #388e3c;
+            font-size: 2.5em;
+            margin-top: 20px;
+        }
+
+        .message {
+            font-size: 1.5em;
+            margin-top: 30px;
+        }
+
+        .footer {
+            margin-top: 50px;
+            font-size: 1.5em;
+            color: #d32f2f;
+        }
+
+        .santa {
+            width: 150px;
+            height: auto;
+            margin: 0 10px;
+        }
+    </style>
+</head>
+<body>
+    <img class="santa" src="https://upload.wikimedia.org/wikipedia/commons/a/a2/GDJ_-_Santa_With_A_Bell.svg" alt="Santa">
+    <h1>🎁 Your Secret Santa Gift! 🎁</h1>
+    <h2>You are gifting: {{ recipient }}!</h2>
+    <p class="message">Don't forget to keep it a secret! 🎅🎄</p>
+
+    <div class="footer">
+        Made with ❤️ by Shaunak<br>
+        If you liked my work, you can Thank me by buying me a chicken biryani 🍗
+    </div>
+</body>
+</html>
