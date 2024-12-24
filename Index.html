@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Secret Santa - Christmas Edition</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f8f8f8;
+            color: #333;
+            text-align: center;
+            padding: 50px;
+        }
+
+        h1 {
+            color: #d32f2f;
+            font-size: 3em;
+        }
+
+        .error {
+            color: red;
+            font-size: 1.5em;
+            margin-top: 20px;
+            font-weight: bold;
+        }
+
+        input[type="text"] {
+            padding: 10px;
+            font-size: 1.2em;
+            width: 70%;
+            max-width: 400px;
+            margin-top: 20px;
+            border: 2px solid #d32f2f;
+            border-radius: 5px;
+        }
+
+        button {
+            background-color: #d32f2f;
+            color: white;
+            padding: 12px 30px;
+            font-size: 1.2em;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+
+        button:hover {
+            background-color: #b71c1c;
+        }
+
+        .footer {
+            margin-top: 50px;
+            font-size: 1.5em;
+            color: #d32f2f;
+        }
+
+        .santa {
+            width: 150px;
+            height: auto;
+            margin: 0 10px;
+        }
+    </style>
+</head>
+<body>
+    <img class="santa" src="https://upload.wikimedia.org/wikipedia/commons/a/a2/GDJ_-_Santa_With_A_Bell.svg" alt="Santa">
+    <h1>🎄 Welcome to the Secret Santa Game 🎄</h1>
+    <p>Enter your unique ID to see who you're gifting this Christmas:</p>
+
+    <form action="/get_id" method="POST">
+        <input type="text" name="unique_id" placeholder="Enter your Unique ID" required>
+        <button type="submit">Submit</button>
+    </form>
+
+    {% if error_message %}
+    <p class="error">{{ error_message }}</p>
+    {% endif %}
+
+    <div class="footer">
+        Made with ❤️ by Shaunak<br>
+        If you liked my work, you can Thank me by buying me a chicken biryani 🍗
+    </div>
+</body>
+</html>
